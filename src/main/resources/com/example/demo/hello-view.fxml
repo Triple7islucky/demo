@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <MenuButton fx:id="menuButton1" layoutY="1.0" mnemonicParsing="false" text="Choose image...">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#displayNoPressureCover" text="Burning" />
+                <MenuItem mnemonicParsing="false" onAction="#displayCowboybebop" text="No Pressure" />
+                  <MenuItem mnemonicParsing="false" onAction="#burning" text="Ice" />
+                  <MenuItem mnemonicParsing="false" onAction="#displayRedHood" text="Ice" />
+              </items>
+            </MenuButton>
+            <ToggleButton fx:id="toggleButton1" layoutX="435.0" layoutY="-1.0" mnemonicParsing="false" onAction="#displayBobaFett" text="Will you press this button" />
+            <ImageView fx:id="thePicture" fitHeight="132.0" fitWidth="269.0" layoutX="165.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Burning.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="442.0" layoutY="99.0" mnemonicParsing="false" onAction="#addImage" prefHeight="30.0" prefWidth="132.0" text="Add Image.." />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <RadioButton fx:id="radioButton1" layoutY="5.0" mnemonicParsing="false" onAction="#displayRedHood" text="RadioButton" />
+            <ChoiceBox fx:id="choiceBox1" layoutX="224.0" layoutY="2.0" prefWidth="150.0" />
+            <ComboBox fx:id="comboBox1" layoutY="73.0" prefWidth="150.0" promptText="I don' t know what I am doing" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
